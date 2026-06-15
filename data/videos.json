@@ -1,6 +1,6 @@
 {
   "channelId": "UCnETBO00VhhaI8xv1ZZO2qA",
-  "lastUpdated": "2026-06-15T14:04:25.184Z",
+  "lastUpdated": "2026-06-15T14:17:35.923Z",
   "videos": [
     {
       "id": "wbZPknVrX7c",
@@ -23,7 +23,10 @@
       },
       "tags": [],
       "game": null,
-      "blogGenerated": false
+      "blogGenerated": false,
+      "playlistIds": [
+        "PLeAiEgaC_uTBtO3dRbBdVRYEQ6xzjEP52"
+      ]
     },
     {
       "id": "08YF8lNwhaA",
@@ -46,7 +49,10 @@
       },
       "tags": [],
       "game": null,
-      "blogGenerated": false
+      "blogGenerated": false,
+      "playlistIds": [
+        "PLeAiEgaC_uTBtO3dRbBdVRYEQ6xzjEP52"
+      ]
     },
     {
       "id": "eoIPhUHGazs",
@@ -69,7 +75,8 @@
       },
       "tags": [],
       "game": null,
-      "blogGenerated": false
+      "blogGenerated": false,
+      "playlistIds": []
     },
     {
       "id": "CzpNBY89DXY",
@@ -92,7 +99,8 @@
       },
       "tags": [],
       "game": null,
-      "blogGenerated": false
+      "blogGenerated": false,
+      "playlistIds": []
     },
     {
       "id": "s-tOW6JVDN8",
@@ -115,7 +123,10 @@
       },
       "tags": [],
       "game": null,
-      "blogGenerated": false
+      "blogGenerated": false,
+      "playlistIds": [
+        "PLeAiEgaC_uTBtO3dRbBdVRYEQ6xzjEP52"
+      ]
     },
     {
       "id": "J1thpPgv6hU",
@@ -138,7 +149,10 @@
       },
       "tags": [],
       "game": null,
-      "blogGenerated": false
+      "blogGenerated": false,
+      "playlistIds": [
+        "PLeAiEgaC_uTBtO3dRbBdVRYEQ6xzjEP52"
+      ]
     },
     {
       "id": "MdA2BZZkBa8",
@@ -161,7 +175,8 @@
       },
       "tags": [],
       "game": null,
-      "blogGenerated": false
+      "blogGenerated": false,
+      "playlistIds": []
     },
     {
       "id": "BlOn059twD4",
@@ -184,7 +199,8 @@
       },
       "tags": [],
       "game": null,
-      "blogGenerated": false
+      "blogGenerated": false,
+      "playlistIds": []
     },
     {
       "id": "_VbBs7uuS4w",
@@ -207,7 +223,8 @@
       },
       "tags": [],
       "game": null,
-      "blogGenerated": false
+      "blogGenerated": false,
+      "playlistIds": []
     },
     {
       "id": "SIGyH_v_3lg",
@@ -230,7 +247,8 @@
       },
       "tags": [],
       "game": null,
-      "blogGenerated": false
+      "blogGenerated": false,
+      "playlistIds": []
     },
     {
       "id": "09qzJDW686k",
@@ -253,7 +271,10 @@
       },
       "tags": [],
       "game": null,
-      "blogGenerated": false
+      "blogGenerated": false,
+      "playlistIds": [
+        "PLeAiEgaC_uTDVVvgOT1FzcdFUtJ2eyreS"
+      ]
     },
     {
       "id": "XsNQlpsSEh8",
@@ -276,7 +297,8 @@
       },
       "tags": [],
       "game": "The Last of Us Part 1",
-      "blogGenerated": false
+      "blogGenerated": false,
+      "playlistIds": []
     }
   ]
 }
