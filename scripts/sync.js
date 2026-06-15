@@ -92,7 +92,7 @@ async function main() {
   });
 
   const keptOld = (existing.videos || [])
-    .filter(v => !fetchedIds.has(v.id))
+    .filter(v => !fetchedIds.has(v.id) && !isShort(v))
     .map(v => {
       const postFile = path.join(POSTS_DIR, `${v.id}.json`);
       return { ...v, blogGenerated: fs.existsSync(postFile) };
