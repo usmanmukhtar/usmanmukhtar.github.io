@@ -1,0 +1,15 @@
+{
+  "name": "afterofficelife-website",
+  "version": "1.0.0",
+  "description": "Official website for AfterOfficeLife gaming YouTube channel",
+  "scripts": {
+    "sync": "node scripts/sync.js",
+    "serve": "npx serve . -p 3000"
+  },
+  "keywords": ["gaming", "youtube", "ps5", "pakistan"],
+  "author": "AfterOfficeLife",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  }
+}

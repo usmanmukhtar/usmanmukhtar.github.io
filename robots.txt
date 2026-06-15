@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://afterofficelife.github.io/sitemap.xml
+
+# Block generated data files from being indexed directly
+Disallow: /data/
+Disallow: /scripts/
+Disallow: /posts/

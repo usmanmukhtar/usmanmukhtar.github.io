@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Primary SEO -->
+  <title>AfterOfficeLife – Gaming After Hours | PS5 & PS4 Gaming from Pakistan</title>
+  <meta name="description" content="Where office life meets gaming life. PS5, PS4 gameplay, game reviews, and community for IT pros, developers, and gamers from Pakistan. Join AfterOfficeLife." />
+  <meta name="keywords" content="AfterOfficeLife, gaming Pakistan, PS5 gameplay, PS4 games, Pakistan gamers, office life gaming, software engineer gaming, game reviews Pakistan" />
+  <meta name="author" content="AfterOfficeLife" />
+  <link rel="canonical" href="https://afterofficelife.github.io/" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://afterofficelife.github.io/" />
+  <meta property="og:title" content="AfterOfficeLife – Gaming After Hours" />
+  <meta property="og:description" content="Where office life meets gaming life. PS5, PS4 gameplay and community for IT pros and gamers from Pakistan." />
+  <meta property="og:image" content="https://afterofficelife.github.io/assets/og-banner.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AfterOfficeLife – Gaming After Hours" />
+  <meta name="twitter:description" content="Where office life meets gaming life. PS5, PS4 gameplay and community for IT pros and gamers from Pakistan." />
+  <meta name="twitter:image" content="https://afterofficelife.github.io/assets/og-banner.jpg" />
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "AfterOfficeLife",
+    "url": "https://afterofficelife.github.io/",
+    "description": "Gaming channel for office workers, IT professionals, and gamers from Pakistan",
+    "author": {
+      "@type": "Person",
+      "name": "AfterOfficeLife",
+      "sameAs": ["https://www.youtube.com/@afterofficelifegaming"]
+    }
+  }
+  </script>
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <a href="/" class="nav-logo">
+      <span class="logo-bracket">[</span>After<span class="logo-accent">Office</span>Life<span class="logo-bracket">]</span>
+    </a>
+    <div class="nav-links">
+      <a href="/">Videos</a>
+      <a href="https://www.youtube.com/@afterofficelifegaming" target="_blank" rel="noopener" class="nav-yt">▶ YouTube</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-eyebrow">PS5 · PS4 · Pakistan Gaming Community</div>
+    <h1 class="hero-title">Gaming Starts<br /><span class="hero-accent">After Office.</span></h1>
+    <p class="hero-sub">A software engineer. A gamer. Building a space where IT people and gamers connect, share, and play together.</p>
+    <a href="https://www.youtube.com/@afterofficelifegaming?sub_confirmation=1" target="_blank" rel="noopener" class="hero-cta">
+      Subscribe on YouTube
+    </a>
+    <div class="hero-stats" id="heroStats">
+      <div class="stat"><span class="stat-val" id="statVideos">–</span><span class="stat-label">Videos</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><span class="stat-val">PS5</span><span class="stat-label">Primary Platform</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><span class="stat-val">🇵🇰</span><span class="stat-label">Pakistan</span></div>
+    </div>
+  </header>
+
+  <!-- LATEST VIDEO SPOTLIGHT -->
+  <section class="spotlight-section">
+    <div class="section-eyebrow">Latest Drop</div>
+    <div class="spotlight" id="spotlightCard">
+      <div class="spotlight-skeleton">Loading latest video…</div>
+    </div>
+  </section>
+
+  <!-- VIDEO GRID -->
+  <main class="main-content">
+    <div class="section-header">
+      <div class="section-eyebrow">All Videos</div>
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="ps5">PS5</button>
+        <button class="filter-btn" data-filter="ps4">PS4</button>
+        <button class="filter-btn" data-filter="gameplay">Gameplay</button>
+      </div>
+    </div>
+    <div class="video-grid" id="videoGrid">
+      <!-- Skeletons while loading -->
+      <div class="card skeleton"></div>
+      <div class="card skeleton"></div>
+      <div class="card skeleton"></div>
+      <div class="card skeleton"></div>
+      <div class="card skeleton"></div>
+      <div class="card skeleton"></div>
+    </div>
+    <div class="load-more-wrap">
+      <button class="load-more" id="loadMoreBtn" style="display:none">Load More</button>
+    </div>
+  </main>
+
+  <!-- ABOUT STRIP -->
+  <section class="about-strip">
+    <div class="about-inner">
+      <div class="about-text">
+        <h2>Office Worker by Day.<br />Gamer by Night.</h2>
+        <p>AfterOfficeLife is built for the people who grind at work and then grind in games. IT pros, developers, and gamers from Pakistan — this community is yours.</p>
+        <a href="https://www.youtube.com/@afterofficelifegaming" target="_blank" rel="noopener" class="about-link">Watch on YouTube →</a>
+      </div>
+      <div class="about-tags">
+        <span class="tag">PlayStation 5</span>
+        <span class="tag">Game Reviews</span>
+        <span class="tag">Pakistan</span>
+        <span class="tag">IT Community</span>
+        <span class="tag">Office Life</span>
+        <span class="tag">Software Engineering</span>
+        <span class="tag">Gameplay</span>
+        <span class="tag">Gaming Community</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <span class="logo-bracket">[</span>After<span class="logo-accent">Office</span>Life<span class="logo-bracket">]</span>
+      </div>
+      <div class="footer-links">
+        <a href="https://www.youtube.com/@afterofficelifegaming" target="_blank" rel="noopener">YouTube</a>
+        <a href="/sitemap.xml">Sitemap</a>
+      </div>
+      <p class="footer-copy">© 2025 AfterOfficeLife. Gaming after the 9-to-5.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

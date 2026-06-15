@@ -1,0 +1,38 @@
+name: Sync YouTube Videos & Generate Blog Posts
+
+on:
+  schedule:
+    # Runs every day at 6:00 AM PKT (1:00 AM UTC)
+    - cron: '0 1 * * *'
+  workflow_dispatch:      # Also allows manual trigger from GitHub UI
+  push:
+    branches: [main]      # Also runs on first deploy
+
+permissions:
+  contents: write         # Allows committing back generated files
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run sync script
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: node scripts/sync.js
+
+      - name: Commit updated data files
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/videos.json posts/ sitemap.xml
+          git diff --cached --quiet || git commit -m "chore: sync videos $(date -u +'%Y-%m-%d')"
+          git push
