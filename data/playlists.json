@@ -1,0 +1,26 @@
+{
+  "lastUpdated": "2026-06-15T14:13:34.701Z",
+  "playlists": [
+    {
+      "id": "PLeAiEgaC_uTBtO3dRbBdVRYEQ6xzjEP52",
+      "title": "007 First Light",
+      "thumbnail": "https://img.youtube.com/vi/J1thpPgv6hU/hqdefault.jpg",
+      "videoIds": [
+        "J1thpPgv6hU",
+        "s-tOW6JVDN8",
+        "08YF8lNwhaA",
+        "wbZPknVrX7c"
+      ],
+      "videoCount": 4
+    },
+    {
+      "id": "PLeAiEgaC_uTDVVvgOT1FzcdFUtJ2eyreS",
+      "title": "The Last of Us Part 1 Walkthrough No Commentary",
+      "thumbnail": "https://img.youtube.com/vi/09qzJDW686k/hqdefault.jpg",
+      "videoIds": [
+        "09qzJDW686k"
+      ],
+      "videoCount": 1
+    }
+  ]
+}

@@ -3,61 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- Dynamic SEO filled by JS -->
-  <title id="pageTitle">Loading… | AfterOfficeLife</title>
-  <meta name="description" id="metaDesc" content="" />
-  <meta name="author" content="AfterOfficeLife" />
-  <link rel="canonical" id="canonicalLink" href="" />
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="article" />
-  <meta property="og:site_name" content="AfterOfficeLife" />
-  <meta property="og:title" id="ogTitle" content="" />
-  <meta property="og:description" id="ogDesc" content="" />
+  <title id="pageTitle">Playlists | AfterOfficeLife</title>
+  <meta name="description" id="metaDesc" content="Full game series and playlists from AfterOfficeLife." />
+  <link rel="canonical" id="canonicalLink" href="https://usmanmukhtar.github.io/playlist.html" />
+  <meta property="og:title" id="ogTitle" content="Playlists | AfterOfficeLife" />
+  <meta property="og:description" id="ogDesc" content="Full game series and playlists from AfterOfficeLife." />
   <meta property="og:image" id="ogImage" content="" />
-  <meta property="og:url" id="ogUrl" content="" />
-
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" id="twTitle" content="" />
-  <meta name="twitter:description" id="twDesc" content="" />
-  <meta name="twitter:image" id="twImage" content="" />
-
-  <!-- Article Schema filled by JS -->
-  <script id="articleSchema" type="application/ld+json"></script>
-
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
 </head>
-<body class="video-page">
+<body class="playlist-page">
 
-  <!-- NAV -->
   <nav class="nav">
     <a href="/" class="nav-logo">
       <span class="logo-bracket">[</span>After<span class="logo-accent">Office</span>Life<span class="logo-bracket">]</span>
     </a>
     <div class="nav-links">
       <a href="/">← All Videos</a>
-      <a href="/playlist.html">Playlists</a>
+      <a href="/playlist.html" class="active">Playlists</a>
       <a href="https://www.youtube.com/@afterofficelifegaming" target="_blank" rel="noopener" class="nav-yt">▶ YouTube</a>
     </div>
   </nav>
 
-  <main class="video-main" id="videoMain">
-    <div class="video-loading">Loading video…</div>
+  <main class="playlist-main" id="playlistMain">
+    <div class="playlist-loading">Loading…</div>
   </main>
-
-  <!-- Series / Playlist strip -->
-  <section class="series-section" id="seriesSection" style="display:none"></section>
-
-  <!-- Related Videos -->
-  <section class="related-section">
-    <div class="section-eyebrow">More Videos</div>
-    <div class="video-grid related-grid" id="relatedGrid"></div>
-  </section>
 
   <footer class="footer">
     <div class="footer-inner">
@@ -72,7 +45,6 @@
     </div>
   </footer>
 
-  <script src="assets/js/video.js"></script>
   <script src="assets/js/playlist.js"></script>
 </body>
 </html>

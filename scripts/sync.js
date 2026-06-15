@@ -27,8 +27,9 @@ const CHANNEL_ID  = 'UCnETBO00VhhaI8xv1ZZO2qA';
 const RSS_URL     = `https://www.youtube.com/feeds/videos.xml?channel_id=${CHANNEL_ID}`;
 const DATA_DIR    = path.join(__dirname, '..', 'data');
 const POSTS_DIR   = path.join(__dirname, '..', 'posts');
-const VIDEOS_FILE = path.join(DATA_DIR, 'videos.json');
-const GEMINI_KEY  = process.env.GEMINI_API_KEY;
+const VIDEOS_FILE    = path.join(DATA_DIR, 'videos.json');
+const PLAYLISTS_FILE = path.join(DATA_DIR, 'playlists.json');
+const GEMINI_KEY     = process.env.GEMINI_API_KEY;
 
 // Ensure directories exist
 [DATA_DIR, POSTS_DIR].forEach(d => { if (!fs.existsSync(d)) fs.mkdirSync(d, { recursive: true }); });
@@ -100,6 +101,9 @@ async function main() {
 
   const merged = [...updatedFetched, ...keptOld];
 
+  // Build playlists from video descriptions (also tags each video with playlistIds)
+  const playlistData = buildPlaylists(merged);
+
   // Save updated videos.json
   const output = {
     channelId:   CHANNEL_ID,
@@ -108,6 +112,9 @@ async function main() {
   };
   fs.writeFileSync(VIDEOS_FILE, JSON.stringify(output, null, 2));
   console.log(`\n✅ Saved data/videos.json (${merged.length} videos)`);
+
+  fs.writeFileSync(PLAYLISTS_FILE, JSON.stringify(playlistData, null, 2));
+  console.log(`✅ Saved data/playlists.json (${playlistData.playlists.length} playlists)`);
 
   // Generate sitemap
   generateSitemap(merged);
@@ -275,9 +282,74 @@ Keep the tone conversational and enthusiastic. Optimize naturally for search ter
   });
 }
 
+// ── PLAYLISTS ────────────────────────────────────────────────────────────────
+function extractPlaylistIds(text) {
+  const re = /[?&]list=(PL[A-Za-z0-9_-]+)/g;
+  const ids = new Set();
+  let m;
+  while ((m = re.exec(text)) !== null) ids.add(m[1]);
+  return [...ids];
+}
+
+function derivePlaylistTitle(videos) {
+  if (!videos.length) return 'Playlist';
+  const game = videos.find(v => v.game)?.game;
+  if (game) return game;
+  const titles = videos.map(v => v.title);
+
+  let prefix = titles[0];
+  for (const t of titles.slice(1)) {
+    let i = 0;
+    while (i < prefix.length && i < t.length && prefix[i] === t[i]) i++;
+    prefix = prefix.slice(0, i);
+  }
+  prefix = prefix.replace(/[\s\-–—|:,]+$/, '').trim();
+
+  // Single video or no useful common prefix → use text before first separator
+  if (titles.length === 1 || prefix.length < 4) {
+    prefix = titles[0].split(/[\-–—|]/)[0].trim();
+  }
+  return prefix || 'Playlist';
+}
+
+function buildPlaylists(videos) {
+  const playlistMap = new Map(); // playlistId -> [videoId, ...]
+  for (const video of videos) {
+    for (const pid of extractPlaylistIds(video.description || '')) {
+      if (!playlistMap.has(pid)) playlistMap.set(pid, []);
+      if (!playlistMap.get(pid).includes(video.id)) playlistMap.get(pid).push(video.id);
+    }
+  }
+
+  // Tag each video with its playlist IDs
+  for (const video of videos) {
+    video.playlistIds = [...playlistMap.entries()]
+      .filter(([, ids]) => ids.includes(video.id))
+      .map(([pid]) => pid);
+  }
+
+  const playlists = [];
+  for (const [pid, videoIds] of playlistMap) {
+    const pvids = videoIds
+      .map(id => videos.find(v => v.id === id))
+      .filter(Boolean)
+      .sort((a, b) => new Date(a.publishedAt) - new Date(b.publishedAt));
+
+    playlists.push({
+      id:         pid,
+      title:      derivePlaylistTitle(pvids),
+      thumbnail:  pvids[0]?.thumbnails?.high?.url || `https://img.youtube.com/vi/${pvids[0]?.id}/hqdefault.jpg`,
+      videoIds:   pvids.map(v => v.id),
+      videoCount: pvids.length
+    });
+  }
+
+  return { lastUpdated: new Date().toISOString(), playlists };
+}
+
 // ── SITEMAP ──────────────────────────────────────────────────────────────────
 function generateSitemap(videos) {
-  const BASE = 'https://afterofficelife.github.io';
+  const BASE = 'https://usmanmukhtar.github.io';
   const urls = [
     `<url><loc>${BASE}/</loc><changefreq>daily</changefreq><priority>1.0</priority></url>`,
     ...videos.map(v =>

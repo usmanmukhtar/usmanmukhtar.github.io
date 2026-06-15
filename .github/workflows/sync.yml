@@ -33,6 +33,6 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/videos.json posts/ sitemap.xml
+          git add data/videos.json data/playlists.json posts/ sitemap.xml
           git diff --cached --quiet || git commit -m "chore: sync videos $(date -u +'%Y-%m-%d')"
           git push

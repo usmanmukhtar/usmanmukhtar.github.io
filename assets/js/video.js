@@ -44,6 +44,9 @@ async function init() {
   // Load AI blog post (if exists)
   loadBlog(videoId, video);
 
+  // Load series/playlist strip (if video belongs to a playlist)
+  if (typeof loadSeriesSection === 'function') loadSeriesSection(videoId, video);
+
   // Load related videos
   loadRelated(videoId);
 }
