@@ -1,6 +1,15 @@
 {
-  "lastUpdated": "2026-07-19T04:21:29.993Z",
+  "lastUpdated": "2026-07-20T04:34:49.030Z",
   "playlists": [
+    {
+      "id": "PLZb5JJ3Go6bY",
+      "title": "Mark of the Ninja Remastered Part 1",
+      "thumbnail": "https://img.youtube.com/vi/QXpmYQMeyM4/hqdefault.jpg",
+      "videoIds": [
+        "QXpmYQMeyM4"
+      ],
+      "videoCount": 1
+    },
     {
       "id": "PLcuifPGjBa7M",
       "title": "Last of Us 2",
