@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-07-31T04:21:08.923Z",
+  "lastUpdated": "2026-08-01T04:19:56.559Z",
   "playlists": [
-    {
-      "id": "PLZb5JJ3Go6bY",
-      "title": "Mark of the Ninja Remastered Part 1",
-      "thumbnail": "https://img.youtube.com/vi/QXpmYQMeyM4/hqdefault.jpg",
-      "videoIds": [
-        "QXpmYQMeyM4"
-      ],
-      "videoCount": 1
-    },
     {
       "id": "PLcuifPGjBa7M",
       "title": "Last of Us 2",
@@ -21,9 +12,20 @@
         "hCvOAUNKsFM",
         "aXx8INkLY0k",
         "zZrsJCwL__I",
-        "lrL6RDJ7_JM"
+        "lrL6RDJ7_JM",
+        "xsullckoHC8",
+        "LPRGKtt5BCE"
       ],
-      "videoCount": 7
+      "videoCount": 9
+    },
+    {
+      "id": "PLZb5JJ3Go6bY",
+      "title": "Mark of the Ninja Remastered Part 1",
+      "thumbnail": "https://img.youtube.com/vi/QXpmYQMeyM4/hqdefault.jpg",
+      "videoIds": [
+        "QXpmYQMeyM4"
+      ],
+      "videoCount": 1
     },
     {
       "id": "PLeAiEgaC_uTCfd3-poadVj0gaKw3C55X4",
