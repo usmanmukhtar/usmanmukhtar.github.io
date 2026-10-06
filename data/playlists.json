@@ -1,6 +1,19 @@
 {
-  "lastUpdated": "2026-10-05T06:33:59.763Z",
+  "lastUpdated": "2026-10-06T07:12:40.167Z",
   "playlists": [
+    {
+      "id": "PLFch4eiTKiKk",
+      "title": "Marvel's Wolverine Walkthrough Part",
+      "thumbnail": "https://img.youtube.com/vi/cWoPIJi8RnA/hqdefault.jpg",
+      "videoIds": [
+        "cWoPIJi8RnA",
+        "cBiuGR2GnQE",
+        "AsKCqTgrD4A",
+        "W-yQyXIc6yc",
+        "D-HH6PNayRQ"
+      ],
+      "videoCount": 5
+    },
     {
       "id": "PLcuifPGjBa7M",
       "title": "Last of Us 2",
