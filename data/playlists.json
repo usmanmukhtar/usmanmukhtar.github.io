@@ -1,6 +1,16 @@
 {
-  "lastUpdated": "2026-11-21T07:59:53.229Z",
+  "lastUpdated": "2026-11-22T07:46:19.438Z",
   "playlists": [
+    {
+      "id": "PLITIXiOnoXxc",
+      "title": "IM THE FIRST PERSON TO PLAY GTA VI IN PAKISTAN!!! GTA 6",
+      "thumbnail": "https://img.youtube.com/vi/zn-nZDZkd6Q/hqdefault.jpg",
+      "videoIds": [
+        "zn-nZDZkd6Q",
+        "Y08XD8S16TQ"
+      ],
+      "videoCount": 2
+    },
     {
       "id": "PLKZO_LpB6XP4",
       "title": "Phantom Blade Zero",
@@ -14,18 +24,10 @@
         "WtqnRY9_HXE",
         "7XelDYWZEy0",
         "m3SqqRbN-d8",
-        "kzYzLGohd44"
+        "kzYzLGohd44",
+        "Lvsc4-mGOL4"
       ],
-      "videoCount": 9
-    },
-    {
-      "id": "PLITIXiOnoXxc",
-      "title": "IM THE FIRST PERSON TO PLAY GTA VI IN PAKISTAN!!! GTA 6",
-      "thumbnail": "https://img.youtube.com/vi/zn-nZDZkd6Q/hqdefault.jpg",
-      "videoIds": [
-        "zn-nZDZkd6Q"
-      ],
-      "videoCount": 1
+      "videoCount": 10
     },
     {
       "id": "PLGkjQUZG16w4",
